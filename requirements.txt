@@ -1,0 +1,9 @@
+# CUDA 12.8 wheels are required for Blackwell (sm_120) GPUs:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.7
+triton>=3.3        # on Windows: pip install triton-windows
+transformers>=4.45  # tokenizer + HF baseline only
+safetensors
+huggingface_hub
+numpy
+pytest

@@ -1,0 +1,10 @@
+mixed bs=  8  HF    122.1 tok/s ( 617.0s)   minfer    715.6 tok/s ( 105.3s)   speedup 5.86x
+mixed bs= 16  HF    174.9 tok/s ( 430.9s)   minfer   1230.2 tok/s (  61.2s)   speedup 7.04x
+mixed bs= 32  HF    281.6 tok/s ( 267.5s)   minfer   2034.6 tok/s (  37.0s)   speedup 7.22x
+mixed bs= 64  HF    306.7 tok/s ( 245.7s)   minfer   2602.3 tok/s (  29.0s)   speedup 8.48x
+fixed bs=  8  HF    236.7 tok/s ( 276.8s)   minfer    931.9 tok/s (  70.3s)   speedup 3.94x
+fixed bs= 16  HF    386.5 tok/s ( 169.6s)   minfer   1668.6 tok/s (  39.3s)   speedup 4.32x
+fixed bs= 32  HF    479.0 tok/s ( 136.8s)   minfer   2614.6 tok/s (  25.1s)   speedup 5.46x
+fixed bs= 64  HF    527.1 tok/s ( 124.3s)   minfer   3190.9 tok/s (  20.5s)   speedup 6.05x
+mixed minfer uncapped (max_num_seqs=256): 4446.5 tok/s
+fixed minfer uncapped (max_num_seqs=256): 5460.3 tok/s

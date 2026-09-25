@@ -1,0 +1,33 @@
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Style,Range
+50.2,627497295,1,627497295.0,627497295.0,627497295,627497295,0.0,PushPop,:decode_steps
+37.9,474255752,50,9485115.0,9273966.5,8592268,18305648,1330388.4,PushPop,:sample
+9.0,112385772,50,2247715.4,2187667.5,1515494,4018719,462818.1,PushPop,:forward
+2.6,32556947,50,651138.9,560046.5,372270,1608148,239354.0,PushPop,:prepare
+0.3,4044871,50,80897.4,81719.5,55220,109579,12374.6,PushPop,:schedule
+
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+42.4,215768213,1150,187624.5,172927.5,170367,512318,63689.3,void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_32x1_tn_align8>(T1::Params)
+26.7,135836361,2200,61743.8,63295.5,31968,97407,28840.6,void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x2_tn_align8>(T1::Params)
+15.0,76557475,1100,69597.7,69120.0,65376,75712,2311.6,_paged_decode_attn_kernel
+8.8,44787459,1100,40715.9,40672.0,38720,44384,668.8,void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8>(T1::Params)
+2.2,11270789,5500,2049.2,2080.0,1504,3168,316.7,"void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float>>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+1.0,4846816,2200,2203.1,2208.0,1728,3264,298.3,"void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::index_copy_kernel_impl<at::native::OpaqueType<(int)2>>(at::TensorIterator &, long long, long long, long long)::[lambda(int) (instance 1)]>(long long, T3)"
+0.9,4803972,2200,2183.6,2304.0,1600,3552,400.0,"void at::native::<unnamed>::CatArrayBatchedCopy<at::native::<unnamed>::OpaqueType<(unsigned int)2>, unsigned int, (int)3, (int)64, (int)64>(T1 *, at::native::<unnamed>::CatArrInputTensorMetadata<T1, T2, T4, T5>, at::native::<unnamed>::TensorSizeStride<T2, (unsigned int)4>, int, T2)"
+0.9,4392936,2200,1996.8,1952.0,1504,3200,328.6,"void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::neg_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 9)]::operator ()() const::[lambda(c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+0.8,3937779,2250,1750.1,1760.0,1376,2528,186.8,_fused_add_rmsnorm_kernel
+0.7,3313997,1100,3012.7,2912.0,2432,4064,265.9,"void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::<unnamed>::silu_kernel(at::TensorIteratorBase &)::[lambda() (instance 1)]::operator ()() const::[lambda() (instance 6)]::operator ()() const::[lambda(c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+0.4,2253968,2200,1024.5,1024.0,800,1632,131.2,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char *, (unsigned long long)3>>(int, T2, T3)"
+0.1,582781,50,11655.6,11184.0,10720,22336,1676.7,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<c10::BFloat16, at::native::ArgMaxOps<float>, unsigned int, long long, (int)4, (int)4>>(T3)"
+0.0,198816,150,1325.4,1280.0,1152,1760,124.9,"void at::native::vectorized_gather_kernel<(int)16, long long>(char *, char *, T2 *, int, long long, long long, long long, long long, bool)"
+0.0,103584,50,2071.7,2048.0,1888,2688,164.0,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<bool, at::native::func_wrapper_t<bool, at::native::or_kernel_cuda(at::TensorIterator &)::[lambda() (instance 1)]::operator ()() const::[lambda() (instance 12)]::operator ()() const::[lambda(bool, bool) (instance 1)]>, unsigned int, bool, (int)4, (int)4>>(T3)"
+0.0,64319,50,1286.4,1232.0,1152,1632,130.7,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 3)]::operator ()() const::[lambda(int) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+0.0,53504,50,1070.1,1024.0,960,1472,121.0,"void at::native::vectorized_elementwise_kernel<(int)4, void at::native::compare_scalar_kernel<float>(at::TensorIteratorBase &, at::native::<unnamed>::OpType, T1)::[lambda(float) (instance 1)], std::array<char *, (unsigned long long)2>>(int, T2, T3)"
+
+Time (%),Total Time (ns),Num Calls,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+78.2,443721034,400,1109302.6,3617.5,2243,17381088,2946574.9,cudaStreamSynchronize
+15.6,88513804,50,1770276.1,1695982.5,1238164,3085388,298962.9,cudaGraphLaunch
+4.3,24478553,600,40797.6,28516.0,9056,923543,59831.7,cudaMemcpyAsync
+1.7,9786771,200,48933.9,39023.5,13543,140691,26913.1,cudaLaunchKernel
+0.1,638929,400,1597.3,1288.5,647,19000,1337.3,cudaStreamIsCapturing
+0.0,40789,1,40789.0,40789.0,40789,40789,0.0,cudaDeviceSynchronize
+

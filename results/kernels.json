@@ -1,0 +1,127 @@
+{
+ "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+ "rmsnorm": [
+  {
+   "rows": 1,
+   "eager_us": 41.21600091457367,
+   "triton_us": 10.080000385642052,
+   "compile_us": 8.00000037997961,
+   "speedup_vs_eager": 4.088888823187123,
+   "triton_gbps": 2.0317459540152103
+  },
+  {
+   "rows": 32,
+   "eager_us": 46.57600075006485,
+   "triton_us": 10.048000141978264,
+   "compile_us": 10.015999898314476,
+   "speedup_vs_eager": 4.6353503276220005,
+   "triton_gbps": 52.585986518106374
+  },
+  {
+   "rows": 256,
+   "eager_us": 70.3199990093708,
+   "triton_us": 18.33599992096424,
+   "compile_us": 20.06400004029274,
+   "speedup_vs_eager": 3.83507849653573,
+   "triton_gbps": 228.97033257508966
+  },
+  {
+   "rows": 2048,
+   "eager_us": 318.04800033569336,
+   "triton_us": 129.87200170755386,
+   "compile_us": 129.82399761676788,
+   "speedup_vs_eager": 2.4489343057318447,
+   "triton_gbps": 258.39694128659994
+  },
+  {
+   "rows": 8192,
+   "eager_us": 2625.1519918441772,
+   "triton_us": 512.5919878482819,
+   "compile_us": 517.8560018539429,
+   "speedup_vs_eager": 5.121328569460933,
+   "triton_gbps": 261.8492430274335
+  }
+ ],
+ "decode_attention": [
+  {
+   "batch": 1,
+   "context": 512,
+   "triton_us": 21.27999998629093,
+   "eager_us": 186.64000183343887,
+   "eager_sdpa_us": 203.45599949359894,
+   "speedup_vs_eager": 8.770676783537438,
+   "speedup_vs_eager_sdpa": 9.56090223800141,
+   "triton_kv_gbps": 24.637594000834515
+  },
+  {
+   "batch": 1,
+   "context": 2048,
+   "triton_us": 25.37599951028824,
+   "eager_us": 207.87200331687927,
+   "eager_sdpa_us": 326.1599987745285,
+   "speedup_vs_eager": 8.191677464077872,
+   "speedup_vs_eager_sdpa": 12.853089733166682,
+   "triton_kv_gbps": 82.64312895930455
+  },
+  {
+   "batch": 8,
+   "context": 512,
+   "triton_us": 30.432000756263733,
+   "eager_us": 218.191996216774,
+   "eager_sdpa_us": 454.27200198173523,
+   "speedup_vs_eager": 7.169820938305023,
+   "speedup_vs_eager_sdpa": 14.927444489111801,
+   "triton_kv_gbps": 137.82544347291062
+  },
+  {
+   "batch": 8,
+   "context": 2048,
+   "triton_us": 78.5600021481514,
+   "eager_us": 404.2559862136841,
+   "eager_sdpa_us": 1618.8960075378418,
+   "speedup_vs_eager": 5.145824531054912,
+   "speedup_vs_eager_sdpa": 20.60712784203935,
+   "triton_kv_gbps": 213.55926096286117
+  },
+  {
+   "batch": 32,
+   "context": 512,
+   "triton_us": 74.49600100517273,
+   "eager_us": 369.05598640441895,
+   "eager_sdpa_us": 1711.6320133209229,
+   "speedup_vs_eager": 4.954037551341757,
+   "speedup_vs_eager_sdpa": 22.9761596626116,
+   "triton_kv_gbps": 225.20961895437918
+  },
+  {
+   "batch": 32,
+   "context": 1024,
+   "triton_us": 137.82399892807007,
+   "eager_us": 866.4960265159607,
+   "eager_sdpa_us": 3729.9200296401978,
+   "speedup_vs_eager": 6.286974933648402,
+   "speedup_vs_eager_sdpa": 27.062921252102342,
+   "triton_kv_gbps": 243.4585577328369
+  },
+  {
+   "batch": 64,
+   "context": 512,
+   "triton_us": 137.92000710964203,
+   "eager_us": 780.128002166748,
+   "eager_sdpa_us": 3510.0479125976562,
+   "speedup_vs_eager": 5.656380234570109,
+   "speedup_vs_eager_sdpa": 25.44988204508487,
+   "triton_kv_gbps": 243.2890825862943
+  },
+  {
+   "batch": 128,
+   "context": 512,
+   "triton_us": 264.8960053920746,
+   "eager_us": 1562.4799728393555,
+   "eager_sdpa_us": 7049.600124359131,
+   "speedup_vs_eager": 5.898465590399209,
+   "speedup_vs_eager_sdpa": 26.612708311418153,
+   "triton_kv_gbps": 253.34041523454334
+  }
+ ]
+}

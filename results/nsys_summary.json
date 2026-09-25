@@ -1,0 +1,67 @@
+{
+ "batch": 32,
+ "prompt_len": 512,
+ "eager": {
+  "steps": 50,
+  "wall_ms_per_step": 35.45435672,
+  "gpu_kernel_ms_per_step": 9.973772480000001,
+  "gpu_busy_fraction": 0.28131302899577754,
+  "kernels_per_step": 470.0,
+  "launch_api_calls_per_step": 470.0,
+  "launch_api_ms_per_step": 10.5868891,
+  "top_kernels": [
+   {
+    "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_32x1_tn_align8>",
+    "pct": 42.7
+   },
+   {
+    "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x2_tn_align8",
+    "pct": 27.1
+   },
+   {
+    "name": "_paged_decode_attn_kernel",
+    "pct": 15.2
+   },
+   {
+    "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8>",
+    "pct": 8.9
+   },
+   {
+    "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_noc",
+    "pct": 1.9
+   }
+  ]
+ },
+ "graphs": {
+  "steps": 50,
+  "wall_ms_per_step": 12.5499459,
+  "gpu_kernel_ms_per_step": 10.17545538,
+  "gpu_busy_fraction": 0.8107967525182718,
+  "kernels_per_step": 471.0,
+  "launch_api_calls_per_step": 5.0,
+  "launch_api_ms_per_step": 1.9660115,
+  "top_kernels": [
+   {
+    "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_32x1_tn_align8>",
+    "pct": 42.4
+   },
+   {
+    "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x2_tn_align8",
+    "pct": 26.7
+   },
+   {
+    "name": "_paged_decode_attn_kernel",
+    "pct": 15.0
+   },
+   {
+    "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8>",
+    "pct": 8.8
+   },
+   {
+    "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_noc",
+    "pct": 2.2
+   }
+  ]
+ },
+ "latency_reduction_pct": 64.60252826158172
+}
